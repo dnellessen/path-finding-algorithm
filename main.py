@@ -1,6 +1,10 @@
-import pygame
 import numpy as np
 import time
+
+import os
+
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = 'True'
+import pygame
 
 import templates
 
