@@ -11,15 +11,15 @@ import templates
 
 class Colors:
     white = (255, 255, 255)
-    black = (0, 0, 0)
 
     red = (150, 0, 0)
     green = (0, 150, 0)
-    blue = (0, 50, 150)
+    orange = (255, 150, 0)
 
-    gray20 = (20, 20, 20)
-    gray25 = (25, 25, 25)
-    gray200 = (200, 200, 200)
+    grey20 = (20, 20, 20)
+    grey25 = (25, 25, 25)
+    grey105 = (105, 105, 105)
+    grey200 = (200, 200, 200)
 
 
 class Grid:
@@ -83,7 +83,7 @@ class GUI:
     pygame.init()
     pygame.display.set_caption('Path Finding Algorithm')
     screen = pygame.display.set_mode((width, height))
-    screen.fill(Colors.gray25)
+    screen.fill(Colors.grey25)
 
     font = pygame.font.SysFont('Arial', 20)
 
@@ -106,12 +106,12 @@ class GUI:
         visualize = 5
 
         colors = {
-            0: Colors.gray20,
+            0: Colors.grey20,
             1: Colors.green,
             2: Colors.red,
-            3: Colors.gray200,
-            4: Colors.blue,
-            5: Colors.black,
+            3: Colors.grey200,
+            4: Colors.orange,
+            5: Colors.grey105,
         }
 
         values = {
@@ -244,11 +244,11 @@ class GUI:
                     if event.key == pygame.K_ESCAPE:
                         self.running = False
 
-            GUI.screen.fill(Colors.gray25)
+            GUI.screen.fill(Colors.grey25)
             GUI.screen.blit(GUI.font.render(
-                f'Visualize:  {Algorithm.visualize}', True, Colors.gray200), (325, 10))
+                f'Visualize:  {Algorithm.visualize}', True, Colors.grey200), (325, 10))
             GUI.screen.blit(GUI.font.render(
-                f'Diagonal:  {Algorithm.diagonal}', True, Colors.gray200), (525, 10))
+                f'Diagonal:  {Algorithm.diagonal}', True, Colors.grey200), (525, 10))
 
             current = GUI.pen.current
             value = GUI.pen.values[current]
