@@ -4,7 +4,7 @@
 
 Find the shortest path between two points using the Breadth-first search (BFS) algorithm.
 
-<img src="img/demo.gif" width="500"> 
+<img src="img/demo.gif" width="75%"> 
 
 
 ## Installation
